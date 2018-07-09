@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 read -p 'Please specify AWS region name in which you would like to host the VPN solution: ' aws_region
-read -p 'Have you configured the AWS CLI? y/n: ' aws_cli_config
+read -p 'Have you configured the AWS CLI? [y/n]: ' aws_cli_config
 
 if [[ ${aws_cli_config} != "y" && ${aws_cli_config} != "Y" ]]; then
     read -p 'AWS Access Key ID: ' aws_access_key_id
@@ -11,9 +11,12 @@ if [[ ${aws_cli_config} != "y" && ${aws_cli_config} != "Y" ]]; then
     export AWS_DEFAULT_REGION=${aws_region}
 fi
 
-read -p 'VPN username: ' vpn_username
-read -p 'VPN password: ' vpn_password
-read -p 'VPN passphrase: ' vpn_passphrase
+read -sp 'VPN username: ' vpn_username
+echo
+read -sp 'VPN password: ' vpn_password
+echo
+read -sp 'VPN passphrase: ' vpn_passphrase
+echo
 
 # Get latest Amazon Linux AMI ID
 ami_id="$(aws ec2 describe-images --owners amazon --filters Name=name,Values=amzn-ami-hvm-*s3\

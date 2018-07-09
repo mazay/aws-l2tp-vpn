@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 read -p 'Please specify AWS region name in which you host the VPN solution: ' aws_region
-read -p 'Have you configured the AWS CLI? y/n: ' aws_cli_config
+read -p 'Have you configured the AWS CLI? [y/n]: ' aws_cli_config
 
 if [[ ${aws_cli_config} != "y" && ${aws_cli_config} != "Y" ]]; then
     read -p 'AWS Access Key ID: ' aws_access_key_id
