@@ -49,6 +49,6 @@ This will create EC2 key pair for you and a CloudFormation stack containing the 
 
 Start the _teardown_vpn.sh_ which will delete the EC2 key pair and CloudFormation stack, please note that the stack deletion procedure on AWS side might take up to 10 minutes.
 ```
-Please specify AWS region name in which you would like to host the VPN solution: 
+Please specify AWS region name in which you host the VPN solution: 
 Have you configured the AWS CLI? [y/n]: 
 ```
