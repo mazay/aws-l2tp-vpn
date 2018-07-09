@@ -1,4 +1,4 @@
-# AWS L2TP IPSec VPN
+# AWS L2TP/IPSec VPN
 
 A fully automated solution for setting up L2TP over IPSec VPN solution in AWS cloud.
 
