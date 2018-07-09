@@ -23,9 +23,9 @@ cd aws-l2tp-vpn
 ```
 
 Start the _spinup_vpn.sh_ script and input details for your VPN setup, you can find the list of AWS regions [here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-```bash
+```
 Please specify AWS region name in which you would like to host the VPN solution: 
-Have you configured the AWS CLI? y/n: 
+Have you configured the AWS CLI? [y/n]: 
 VPN username: 
 VPN password: 
 VPN passphrase: 
@@ -48,3 +48,7 @@ This will create EC2 key pair for you and a CloudFormation stack containing the 
 ### Tearing down the VPN
 
 Start the _teardown_vpn.sh_ which will delete the EC2 key pair and CloudFormation stack, please note that the stack deletion procedure on AWS side might take up to 10 minutes.
+```
+Please specify AWS region name in which you would like to host the VPN solution: 
+Have you configured the AWS CLI? [y/n]: 
+```
