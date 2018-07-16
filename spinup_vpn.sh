@@ -31,7 +31,8 @@ echo ${ec2_keypair_output} > ec2_keypair_output
 # Create CloudFormation stack
 vpn_stack_output="$(aws cloudformation create-stack --stack-name L2TP-IPSec-VPN --template-body file://VPN_CF_template.yaml\
  --parameters ParameterKey=VPNUsername,ParameterValue=${vpn_username} ParameterKey=VPNPassword,ParameterValue=${vpn_password}\
- ParameterKey=VPNPhrase,ParameterValue=${vpn_passphrase} ParameterKey=EC2KeyName,ParameterValue=L2TP_VPN_key)"
+ ParameterKey=VPNPhrase,ParameterValue=${vpn_passphrase} ParameterKey=EC2AMIID,ParameterValue=${ami_id}\
+ ParameterKey=EC2KeyName,ParameterValue=L2TP_VPN_key)"
 
 echo 'Creating CloudFormation stack'
 
