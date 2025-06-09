@@ -32,10 +32,15 @@ Parameters:
   EC2InstanceType:
     Description: Type of EC2 instance
     Type: String
-    Default: t2.nano
+    Default: t4g.nano
     AllowedValues:
-      - t2.nano
-      - t2.micro
+      - t4g.nano
+      - t4g.micro
+      - t4g.small
+      - t4g.medium
+      - t4g.large
+      - t4g.xlarge
+      - t4g.2xlarge
   EC2SSHPort:
     Description: Port for SSH
     Type: Number
