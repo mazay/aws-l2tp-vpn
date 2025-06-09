@@ -19,7 +19,7 @@ read -sp 'VPN passphrase: ' vpn_passphrase
 echo
 
 # Get latest Amazon Linux AMI ID
-ami_id="$(aws ec2 describe-images --owners amazon --filters Name=name,Values=amzn-ami-hvm-*ebs\
+ami_id="$(aws ec2 describe-images --owners amazon --filters Name=name,Values=amzn2-ami-hvm-*-arm64-gp2\
  --query "reverse(sort_by(Images, &CreationDate))[0].ImageId" --output text --region ${aws_region})"
 
 echo 'Creating EC2 key pair'
